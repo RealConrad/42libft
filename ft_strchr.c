@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/18 14:28:14 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/21 15:06:55 by cwenz            ###   ########.fr       */
+/*   Created: 2023/03/21 11:18:36 by cwenz             #+#    #+#             */
+/*   Updated: 2023/03/21 15:48:48 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "libft.h"
-
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-	size_t	dest_len;
-	size_t	src_len;
+	char	*ptr_s;
 
-	src_len = ft_strlen(src);
-	dest_len = ft_strlen(dest);
-	i = 0;
-	if (size <= dest_len)
-		return (size + src_len);
-	while (src[i] && (i < size - 1 - dest_len))
-	{
-		dest[dest_len + i] = src[i];
-		i++;
-	}
-	dest[dest_len + i] = '\0';
-	return (src_len + dest_len);
+	ptr_s = (char *) s;
+	if (*ptr_s == (char)c)
+		return (ptr_s);
+	while (*ptr_s++)
+		if (*ptr_s == (char)c)
+			return (ptr_s);
+	return (0);
 }
