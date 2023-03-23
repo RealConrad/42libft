@@ -6,11 +6,11 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:57:41 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/21 16:16:46 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/23 09:55:29 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_bzero(void *str, size_t n)
 {

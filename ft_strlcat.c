@@ -6,11 +6,10 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 14:28:14 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/21 15:06:55 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/23 09:56:05 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, char *src, size_t size)

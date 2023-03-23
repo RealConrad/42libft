@@ -6,11 +6,11 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 14:28:03 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/21 16:26:05 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/23 09:56:34 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -28,14 +28,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (return_val);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-// 	char str[] = "Hello T\0here!";
-// 	printf("Original: %s\n", strrchr(str, '\0'));
-// 	printf("My Func: %s\n", ft_strrchr(str, '\0'));
-
-// 	return (0);
-// }

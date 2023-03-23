@@ -6,11 +6,10 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 11:36:32 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/22 14:48:00 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/23 09:56:25 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
