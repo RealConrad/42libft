@@ -6,12 +6,17 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:57:41 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/23 09:55:29 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/24 16:59:35 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+** @brief Sets a block of memory to 0
+** @param str The block of memory to be set to 0
+** @param n How many bytes of memory that must be set to 0
+*/
 void	ft_bzero(void *str, size_t n)
 {
 	unsigned char	*ch;

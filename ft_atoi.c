@@ -6,10 +6,16 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:03:59 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/22 17:02:32 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/24 16:50:35 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+** @brief Converts a string of characters representing an integer value 
+** 		into an actual integer value
+** @param str String to convert to int
+** @return Returns the int value of the passed string
+*/
 int	ft_atoi(const char *str)
 {
 	int	i;

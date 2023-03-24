@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 11:36:32 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/23 09:56:25 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/23 09:57:24 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	{
 		if (haystack[i] == needle[k])
 		{
-			while ((i + k) < len && haystack[i + k] == needle[k]) //check matching characters between haystack needle
+			while ((i + k) < len && haystack[i + k] == needle[k])
 			{
 				k++;
 				if (!needle[k])
 					return ((char *)haystack + i);
 			}
-			k = 0; // reset k if we didn't find the needle
+			k = 0;
 		}
 		i++;
 	}

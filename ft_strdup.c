@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 13:16:16 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/23 15:22:52 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/23 15:25:00 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strdup(const char *s1)
 	char	*str;
 	size_t	length;
 
-	length = ft_strlen(s1);
-	copy = (char *)malloc(sizeof(char) * length + 1);
+	length = ft_strlen(s1) + 1;
+	copy = (char *)malloc(sizeof(char) * length);
 	str = copy;
 	if (!copy)
 		return (NULL);

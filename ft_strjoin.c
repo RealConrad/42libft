@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 09:50:29 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/24 10:18:26 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/24 11:37:22 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 	char	*temp;
 
-	if (!s1 || !s2)
-		return (NULL);
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!str)
+	if (!str || (!s1 && !s2))
 		return (NULL);
 	temp = str;
 	while (*s1)
