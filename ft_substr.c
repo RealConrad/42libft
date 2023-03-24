@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 15:20:39 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/23 15:48:35 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/24 09:47:24 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,23 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*p;
-	char			*copy;
 	unsigned int	i;
-	unsigned int	j;
 
-	i = start;
-	j = 0;
-	copy = (char *)malloc(sizeof(char) * (len + 1));
-	if (!copy || !s || start >= ft_strlen(s))
+	i = 0;
+	if (!s)
 		return (NULL);
-	p = copy;
-	while (s[i] && j < len)
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	p = (char *)malloc(sizeof(char) * (len + 1));
+	if (!p)
+		return (NULL);
+	while (s[start + i] && i < len)
 	{
-		p[j] = s[i];
-		j++;
+		p[i] = s[i + start];
 		i++;
 	}
-	p[j] = '\0';
+	p[i] = '\0';
 	return (p);
 }
