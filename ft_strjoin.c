@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/23 15:20:39 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/24 09:50:15 by cwenz            ###   ########.fr       */
+/*   Created: 2023/03/24 09:50:29 by cwenz             #+#    #+#             */
+/*   Updated: 2023/03/24 10:18:26 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*p;
-	unsigned int	i;
+	char	*str;
+	char	*temp;
 
-	i = 0;
-	if (!s)
+	if (!s1 || !s2)
 		return (NULL);
-	if (start >= ft_strlen(s))
-		return (ft_strdup(""));
-	if (len > ft_strlen(s) - start)
-		len = ft_strlen(s) - start;
-	p = (char *)malloc(sizeof(char) * (len + 1));
-	if (!p)
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
 		return (NULL);
-	while (s[start + i] && i < len)
-	{
-		p[i] = s[i + start];
-		i++;
-	}
-	p[i] = '\0';
-	return (p);
+	temp = str;
+	while (*s1)
+		*temp++ = *s1++;
+	while (*s2)
+		*temp++ = *s2++;
+	*temp = '\0';
+	return (str);
 }
