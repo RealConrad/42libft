@@ -1,65 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim copy.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 10:26:14 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/24 17:20:40 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/27 13:47:37 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
+/**
+** @brief Allocates (with malloc(3)) and returns a copy of
+**	’s1’ with the characters specified in ’set’ removed
+**	from the beginning and the end of the string
+** @param s1 The string to be trimmed 
+** @param set The reference set of characters to trim
+** @return The trimmed string or NULL if the allocation fails.
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	k;
+	char	*str;
+	int		i;
+	int		j;
+
 	if (!s1 || !set)
 		return (NULL);
-	k = 0;
-	while (ft_strchr(set, s1[k]) && s1[k])
-		k++;
-	i = ft_strlen(s1);
-	while (ft_strchr(set, s1[i]) && i > k)
-		i--;
-	return (ft_substr(s1, i, (k + 1) - i));
+	i = 0;
+	j = ft_strlen(s1) - 1;
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	while (j > i && ft_strchr(set, s1[j]))
+		j--;
+	if (j < i)
+		return (ft_strdup(""));
+	str = ft_substr(s1, i, j - i + 1);
+	return (str);
 }
-
-// char	*ft_strtrim(char const *s1, char const *set)
-// {
-// 	char	*str;
-// 	char	*temp;
-// 	size_t	i;
-// 	size_t	j;
-
-// 	if (!s1 || !set)
-// 		return (NULL);
-// 	str = (char *)malloc(sizeof(char *) * ((ft_strlen(s1) - ft_strlen(set)) + 1));
-// 	if (!str)
-// 		return (NULL);
-// 	temp = str;
-// 	i = 0;
-// 	j = 0;
-// 	while (s1[i])
-// 	{
-// 		if (s1[i] == set[j])
-// 		{
-// 			j++;
-// 			continue ;
-// 		}
-// 		temp[i] = s1[i];
-// 		printf("Char: %c\n", s1[i]);
-// 		i++;
-// 	}
-// 	printf("2nd Str: %s\n", str);
-// 	return (str);
-// }
-
-// int main()
-// {
-// 	ft_strtrim("This is my string", "my");
-// 	return (0);
-// }
