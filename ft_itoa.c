@@ -6,12 +6,11 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:10:27 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/28 09:11:09 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/28 09:13:26 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	*get_number(char *str, int sign, int n, int i)
 {
