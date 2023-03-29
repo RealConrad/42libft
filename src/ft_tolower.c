@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:18:14 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/17 12:02:14 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/27 10:53:54 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,13 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
+
+/*
+#include <stdio.h>
+
+int main()
+{
+	printf("%c\n", ft_tolower('G'));
+	return (0);
+}
+*/

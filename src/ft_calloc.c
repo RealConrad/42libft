@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 09:12:19 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/24 17:58:27 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/29 02:24:41 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,10 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*p;
 	size_t	total;
 
-	if (count == 0 || size == 0)
-	{
-		count = 1;
-		size = 1;
-	}
 	total = count * size;
 	p = malloc(total);
+	if (!p)
+		return (NULL);
 	if (p)
 		ft_bzero(p, total);
 	return (p);

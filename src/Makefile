@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/15 11:34:38 by cwenz             #+#    #+#              #
-#    Updated: 2023/03/21 19:13:32 by cwenz            ###   ########.fr        #
+#    Updated: 2023/03/29 17:56:32 by cwenz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,9 +28,28 @@ SRC = ft_strlen.c \
 		ft_strchr.c \
 		ft_strchr.c \
 		ft_strrchr.c \
-		ft_strncmp.c
+		ft_strncmp.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_strnstr.c \
+		ft_atoi.c \
+		ft_calloc.c \
+		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_split.c \
+		ft_split.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c
 CFLAGS = -Wall -Wextra -Werror
 OBJ = $(SRC:.c=.o)
+CC = cc
 
 all: $(NAME)
 $(NAME): $(OBJ)

@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 09:17:48 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/27 10:53:56 by cwenz            ###   ########.fr       */
+/*   Created: 2023/03/29 17:42:01 by cwenz             #+#    #+#             */
+/*   Updated: 2023/03/29 17:53:27 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
-{
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
-}
+#include "libft.h"
 
-/*
-#include <stdio.h>
+/// @brief Outputs 's' to the given file descriptor followed by newline
+/// @param s The string to be output
+/// @param fd The descriptor to which s is written to
+void	ft_putendl_fd(char *s, int fd)
 {
-int main()
-
-	printf("%c\n", ft_toupper('g'));
-	return (0);
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }
-*/

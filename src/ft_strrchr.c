@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 14:28:03 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/23 09:57:27 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/27 10:58:11 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,15 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (return_val);
 }
+
+/*
+#include <stdio.h>
+
+int main()
+{
+	char	s[] = "Hello world";
+	printf("%s\n", ft_strchr(s, 'w'));
+	
+	return (0);
+}
+*/

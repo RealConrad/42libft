@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 15:20:39 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/24 09:46:19 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/27 10:53:51 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	p[i] = '\0';
 	return (p);
 }
+
+/*
+#include <stdio.h>
+
+int main()
+{
+	char			s[] = "Hello this is my string";
+	unsigned int	start = 5;
+	size_t			len = 5;
+	printf("%s\n", ft_substr(s,start, len));
+	return (0);
+}
+*/
