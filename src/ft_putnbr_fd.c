@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 17:56:08 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/29 18:16:30 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/03/30 14:46:46 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,21 @@
 */
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*num_as_char;
-
-	num_as_char = ft_itoa(n);
-	ft_putstr_fd(num_as_char, fd);
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+	}
+	if (n < 10)
+		ft_putchar_fd(n + '0', fd);
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + 48, fd);
+	}
 }

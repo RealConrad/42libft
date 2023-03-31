@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 17:30:04 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/30 14:18:02 by cwenz            ###   ########.fr       */
+/*   Created: 2023/03/30 18:40:38 by cwenz             #+#    #+#             */
+/*   Updated: 2023/03/31 09:08:18 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
-** @brief Outputs the string 's' to the given file descriptor
-** @param s The string to ouput
-** @param fd The file descriptor to which to write to
+** @breif  Returns the last node of the linked list
+** @param lst The beginning of the list.
+** @return Returns the last node
 */
-void	ft_putstr_fd(char *s, int fd)
-{
-	int	i;
-	int	length;
 
-	i = 0;
-	length = ft_strlen(s);
-	while (i < length)
-		ft_putchar_fd(s[i++], fd);
+t_list	*ft_lstlast(t_list *lst)
+{
+	if (!lst)
+		return (NULL);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

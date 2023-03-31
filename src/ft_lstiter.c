@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 17:30:04 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/30 14:18:02 by cwenz            ###   ########.fr       */
+/*   Created: 2023/03/31 11:09:53 by cwenz             #+#    #+#             */
+/*   Updated: 2023/03/31 11:14:33 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
-** @brief Outputs the string 's' to the given file descriptor
-** @param s The string to ouput
-** @param fd The file descriptor to which to write to
+** @brief Iterates the list ’lst’ and applies the function ’f’ on 
+**	the content of each node.
+** @param lst The address to the node
+** @param f The address to the function
+** @return None
 */
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	i;
-	int	length;
-
-	i = 0;
-	length = ft_strlen(s);
-	while (i < length)
-		ft_putchar_fd(s[i++], fd);
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

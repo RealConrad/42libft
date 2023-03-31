@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 17:30:04 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/30 14:18:02 by cwenz            ###   ########.fr       */
+/*   Created: 2023/03/30 18:21:50 by cwenz             #+#    #+#             */
+/*   Updated: 2023/03/30 18:44:33 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
-** @brief Outputs the string 's' to the given file descriptor
-** @param s The string to ouput
-** @param fd The file descriptor to which to write to
+** @brief Counts the number of nodes in a list.
+** @param lst The beginning of the list 
+** @return Length of the list
 */
-void	ft_putstr_fd(char *s, int fd)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
-	int	length;
 
 	i = 0;
-	length = ft_strlen(s);
-	while (i < length)
-		ft_putchar_fd(s[i++], fd);
+	while (lst != NULL)
+	{
+		i++;
+		lst = lst->next;
+	}
+	return (i);
 }

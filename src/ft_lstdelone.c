@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 17:30:04 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/30 14:18:02 by cwenz            ###   ########.fr       */
+/*   Created: 2023/03/31 09:57:13 by cwenz             #+#    #+#             */
+/*   Updated: 2023/03/31 10:29:26 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
-** @brief Outputs the string 's' to the given file descriptor
-** @param s The string to ouput
-** @param fd The file descriptor to which to write to
+** @brief Takes as a parameter a node and frees the memory of the nodes
+**	content using the function 'del'. The memory of 'next' must not be freed
+** @param lst The node to free.
+** @param del The address of the function used to delete
+**	the content.
+** @return None
 */
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	int	i;
-	int	length;
-
-	i = 0;
-	length = ft_strlen(s);
-	while (i < length)
-		ft_putchar_fd(s[i++], fd);
+	if (lst)
+		del(lst->content);
+	free(lst);
 }

@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 17:30:04 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/30 14:18:02 by cwenz            ###   ########.fr       */
+/*   Created: 2023/03/31 09:11:05 by cwenz             #+#    #+#             */
+/*   Updated: 2023/03/31 10:26:46 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
-** @brief Outputs the string 's' to the given file descriptor
-** @param s The string to ouput
-** @param fd The file descriptor to which to write to
+** @brief Adds the node ’new’ at the end of the list
+** @param lst The address of a pointer to the first link of
+**	a list.
+** @param new The address of a pointer to the node to be
+**	added to the list.
+** @return None
 */
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	i;
-	int	length;
+	t_list	*last_node;
 
-	i = 0;
-	length = ft_strlen(s);
-	while (i < length)
-		ft_putchar_fd(s[i++], fd);
+	if (!new)
+		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	last_node = ft_lstlast(*lst);
+	last_node->next = new;
 }
