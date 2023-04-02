@@ -6,12 +6,20 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 15:20:39 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/27 10:53:51 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/04/02 16:46:05 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/**
+** @brief Allocates memory and returns a substring
+**	from string 's', The substring begins at 'start' and 
+**	is max bytes of 'len'
+** @param s The string to create a substring from
+** @param start Starting position in 's'
+** @param len Number of bytes the substring will be
+** @return Returns the substring or NULL if allocation fails
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*p;

@@ -6,10 +6,15 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:18:14 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/27 10:53:54 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/04/02 16:47:05 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+** @brief Converts an uppercase char to lowercase
+** @param c The char to convert
+** @return The char 'c'
+*/
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)

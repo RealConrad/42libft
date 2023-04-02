@@ -6,12 +6,22 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 11:36:32 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/27 10:59:48 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/04/02 16:41:32 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+** @brief Locates the first occurance of string 'needle' and searches for 'len'
+**	bytes
+** @param haystack The string to see if 'needle' can be found
+** @param needle The string to look for
+** @param len Number of bytes to search
+** @return If needle is not found, NULL is returned. if needle is an empty
+**	string, haystack is returned. If needle is found, a pointer to the first
+**	occurance of needle is returned.
+*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t		i;

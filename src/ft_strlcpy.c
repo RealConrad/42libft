@@ -6,12 +6,19 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 12:39:26 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/23 09:57:05 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/04/02 16:34:17 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+** @brief Copies 'src' to 'dest' for 'size' bytes
+** @param dest Pointer to 'dest' memory block
+** @param src Pointer to the src to be copied over
+** @param size Number of bytes to be copied
+** @return The 'src' length
+*/
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	unsigned int	i;

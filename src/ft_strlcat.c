@@ -6,12 +6,19 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 14:28:14 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/23 09:57:01 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/04/02 16:32:55 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+** @brief Copies and concatenates 'src' to 'dest'
+** @param dest Pointer to the 'dest'
+** @param src Pointer to the 'src' to concat to 'dest'
+** @param size Number of bytes to concat
+** @return Returns the length of 'dest' and 'src'
+*/
 size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	size_t	i;

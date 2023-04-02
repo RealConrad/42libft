@@ -6,12 +6,19 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 09:50:29 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/24 11:37:22 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/04/02 16:30:33 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+** @brief Allocates memory and returns the result of the concatenation of
+**	's1' and 's2'
+** @param s1 The prefix string
+** @param s2 The suffic string
+** @return Returns the new string resulted by 's1' and 's2'
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
