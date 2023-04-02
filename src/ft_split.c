@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 13:58:35 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/29 13:51:10 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/04/02 16:48:07 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,12 @@ static int	count_substr(char *str, char c)
 	return (count);
 }
 
+/**
+** @brief Splits the string 's' into substrings by the delimiter 'c'
+** @param s The string to be split 
+** @param c The delimiter to split the string
+** @return A pointer to the newly created splitted strings
+*/
 char	**ft_split(char const *s, char c)
 {
 	char	**split_str;

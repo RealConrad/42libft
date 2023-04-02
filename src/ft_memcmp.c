@@ -6,12 +6,20 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 10:35:40 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/23 09:56:46 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/04/02 16:17:23 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+** @brief Compares 2 blocks of memory
+** @param s1 Pointer to the 1st block of memory
+** @param s2 Pointer to the 2nd block of memory
+** @param n The number of bytes to compare
+** @return Returns 0 if both are identical or returns the difference between
+**	the 1st and 2nd blocks of memory
+*/
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*ptr_s1;

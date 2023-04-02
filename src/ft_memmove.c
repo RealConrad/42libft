@@ -6,12 +6,20 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 10:04:33 by cwenz             #+#    #+#             */
-/*   Updated: 2023/03/24 17:57:46 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/04/02 16:50:07 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+** @brief Copies 'n'n bytes from src to dest. The 2 blocks of memmory may
+**	overlap
+** @param dest Pointer to the dest 
+** @param src Pointer to the string to be moved
+** @param n Number of bytes to be moved
+** @return The original value of 'dest'
+*/
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
