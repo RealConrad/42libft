@@ -15,8 +15,6 @@
     </a>
 </p>
 
-# <!--purely added this # for the line break -->
-
 ## Most of the functions in my library are my versions of the standard C functions.
 You can find a detailed description for each function [here](https://www.ibm.com/docs/en/i/7.3?topic=extensions-standard-c-library-functions-table-by-name)
 
